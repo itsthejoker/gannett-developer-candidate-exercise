@@ -1,4 +1,6 @@
 cherrypy
 mako
+mock
+nose
 pytest
 requests
