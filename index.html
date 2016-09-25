@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>${title}</title>
+    <style>
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        width: 1000px;
+        margin: auto;
+        padding: 10px 10px 10px 10px;
+        color: ${text_color};
+    }
+    .article a {
+        color: ${text_color};
+        text-decoration: none;
+    }
+
+    h2:before {
+        content: "";
+        display: inline-block;
+        margin-right:1%;
+        width: 3%;
+        height: 10px;
+        background-color: ${text_color};
+    }
+
+    h2:hover {
+        background-color: ${text_color};
+        color: #FFFFFF;
+        text-shadow: 1px 1px 1px #333;
+    }
+
+    </style>
+  </head>
+  <body>
+    <center>
+        <h1>
+            My Delicious Articles
+        <h1>
+    </center>
+    <div class="article">
+        <ul>
+            % for a in articles['articles']:
+                <li><a href=${a['href']} style="text-decoration:none;">
+                    <h2>${a['title']}</h2>
+                        ${a['summary']}
+                    </a>
+                </li>
+            % endfor
+        </ul>
+    </div>
+  </body>
+</html>
