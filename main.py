@@ -1,11 +1,7 @@
-import os.path
-
 import cherrypy
 import requests
 
 from mako.template import Template
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
 
 profile_site = "https://peaceful-springs-7920.herokuapp.com/profile/"
 articles_site = "https://peaceful-springs-7920.herokuapp.com/content/{}/"
